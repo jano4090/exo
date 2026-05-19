@@ -1,0 +1,17 @@
+---
+- name: Configuration de base de la machine Rocky Linux
+  hosts: fedora
+  become: yes  # Pour avoir les droits administrateur (root)
+
+  tasks:
+    - name: Verifier si podman est present
+      ansible.builtin.yum:
+        name: podman
+        state: present
+      become: True
+    
+    - name: 
+      ansible.builtin.yum:
+        name: podman
+        state: latest
+      become: True
