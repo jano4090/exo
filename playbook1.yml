@@ -1,17 +1,9 @@
 ---
-- name: Configuration de base de la machine Rocky Linux
+- name: Installer la dernière version de podman
   hosts: fedora
-  become: yes  # Pour avoir les droits administrateur (root)
-
+  become: yes
   tasks:
-    - name: Verifier si podman est present
+    - name:  
       ansible.builtin.yum:
-        name: podman
-        state: present
-      become: True
-    
-    - name: 
-      ansible.builtin.yum:
-        name: podman
-        state: latest
-      become: True
+      name: podman
+      state: latest
