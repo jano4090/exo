@@ -1,9 +1,9 @@
 ---
-- name: Installer la dernière version de podman
+- name: Installer la dernière version de kubernetes-client
   hosts: fedora
   become: yes
   tasks:
-    - name:  Installer podman
+    - name:  Installer kubernetes-client
       ansible.builtin.yum:
-        name: minikube
+        name: kubernetes-client
         state: latest
