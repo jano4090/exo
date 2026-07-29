@@ -5,5 +5,5 @@
   tasks:
     - name:  Installer podman
       ansible.builtin.yum:
-        name: podman
+        name: minikube
         state: latest
